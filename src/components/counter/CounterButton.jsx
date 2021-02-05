@@ -28,21 +28,6 @@ class CounterButton extends Component {
     increment(){
         this.props.incrementMethod(this.props.by)
     }
-
-    // // Update the state counter
-    // decrement(){
-    //     this.props.decrementMethod(this.props.by)
-    // }
 }
-
-// Set the default value of the prop if not given
-// Counter.defaultProps = {
-//     by : 1
-// }
-
-// Check if Prop types is correct value expected
-// Counter.propTypes = {
-//     by : PropTypes.number
-// }
 
 export default CounterButton

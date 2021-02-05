@@ -52,10 +52,6 @@ class LoginComponent extends Component{
             </div>
         )
     }
-    // Same for password if this method is wanted
-    // handleUsernameChange(e) {
-    //     this.setState({username: e.target.value})
-    // }
 }
 
 export default LoginComponent

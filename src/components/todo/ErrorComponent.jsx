@@ -11,19 +11,4 @@ export class ErrorComponent extends Component{
     }
 }
 
-// Way to show success and login failed messages without jsx login on top
-// function ShowInvalidCredentials(props){
-//     if(props.hasLoginFailed) {
-//         return <div>Invalid Credentials</div>
-//     }
-//     return null
-// }
-
-// function ShowLoginSuccessMessage(props){
-//     if(props.showSuccessMessage) {
-//         return <div>Success!</div>
-//     }
-    // return null
-// }
-
 export default ErrorComponent
