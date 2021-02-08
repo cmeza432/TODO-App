@@ -8,6 +8,27 @@ body {
   margin: 0;
 }
 
+@media screen and (max-width: 500px) {
+  .login-title {
+    padding-top: 4vw;
+    padding-bottom: 2vw;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    margin: 0 0 2vw 0;
+  }
+
+  .login-entry {
+    display: grid;
+    padding: 0 42vw 0 42vw;
+  }
+
+  .login-button {
+    margin-top: 1vw;
+  }
+}
+
 .footer {
   position: absolute;
   bottom: 0;
