@@ -1,13 +1,3 @@
-# Getting Started with TODO List Application
-This application is being built using React, Java and SQL. It's a simple application that helps with keeping track of task to be completed.
-Once the user has entered a task to be completed, it will stay there until it is finished and removed by user.
-
-## Still working on:
-* **TODO list page --> let user input task, remove task instead of hard code examples**
-* **Create database and connect it to the app to let users log in and scan previously created accounts**
-* **Create API handling using Java, Springboot**
-* **Deploy app using AWS or Kubernetes**
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
