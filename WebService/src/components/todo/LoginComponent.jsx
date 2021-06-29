@@ -25,7 +25,7 @@ class LoginComponent extends Component{
     }
 
     loginClicked(e){
-        // Only valid right now is in28
+        // Only valid right now is test
         if(this.state.username==='test' && this.state.password==='test'){
             AuthenticationService.registerSuccessfulLogin(this.state.username)
             this.props.history.push(`/welcome/${this.state.username}`)

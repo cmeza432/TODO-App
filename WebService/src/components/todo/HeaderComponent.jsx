@@ -12,8 +12,8 @@ class HeaderComponent extends Component {
             <header>
                 <nav className="navbar navbar-expand-md navbar-dark bg-dark">
                     {/* Element for left hand side of header */}
-
                     <div><a href="/welcome/in28" className="navbar-brand">Todo List Application</a></div>
+                    
                     {/* Element for right hand side of the header */}
                     <ul className="navbar-nav navbar-collapse justify-content-end">
                         {isUserLoggedIn && <li><Link className="nav-link" to="/welcome/in28">Home</Link></li>}
