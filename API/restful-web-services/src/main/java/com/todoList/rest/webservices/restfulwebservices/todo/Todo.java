@@ -7,15 +7,24 @@ public class Todo {
 	private String username;
 	private String description;
 	private Date targetDate;
-	private boolean isDone;
+	private String isDone;
 	
-	public Todo(long id, String username, String description, Date targetDate, boolean isDone) {
+	protected Todo() {}
+	
+	public Todo(long id, String username, String description, Date targetDate, boolean done) {
 		super();
 		this.id = id;
 		this.username = username;
 		this.description = description;
 		this.targetDate = targetDate;
-		this.isDone = isDone;
+		convertCompleted(done);
+	}
+	
+	public void convertCompleted(boolean done) {
+		if(done) 
+			this.isDone =  "Yes";
+		else
+			this.isDone =  "No";
 	}
 	
 	public long getId() {
@@ -49,12 +58,12 @@ public class Todo {
 		this.targetDate = targetDate;
 	}
 	
-	public boolean getIsDone() {
+	public String getIsDone() {
 		return isDone;
 	}
 	
-	public void setDone(boolean isDone) {
-		this.isDone = isDone;
+	public void setDone(boolean done) {
+		convertCompleted(done);
 	}
 
 	@Override

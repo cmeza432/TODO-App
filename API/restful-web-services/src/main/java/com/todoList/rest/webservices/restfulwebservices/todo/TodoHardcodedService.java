@@ -9,18 +9,33 @@ import org.springframework.stereotype.Service;
 @Service
 public class TodoHardcodedService {
 
-	private static List<Todo> todos = new ArrayList();
+	private static List<Todo> todos = new ArrayList<Todo>();
 	private static int idCounter = 0;
 	
 	static {
-		todos.add(new Todo(++idCounter, "Test"+idCounter, "Learn", new Date(), false));
-		todos.add(new Todo(++idCounter, "Test"+idCounter, "Win in COD", new Date(), false));
-		todos.add(new Todo(++idCounter, "Test"+idCounter, "Next Day", new Date(), false));
-		todos.add(new Todo(++idCounter, "Test"+idCounter, "Ok", new Date(), false));
+		todos.add(new Todo(++idCounter, "Test "+idCounter, "Learn", new Date(), false));
+		todos.add(new Todo(++idCounter, "Test "+idCounter, "Win in COD", new Date(), false));
+		todos.add(new Todo(++idCounter, "Test "+idCounter, "Next Day", new Date(), false));
+		todos.add(new Todo(++idCounter, "Test "+idCounter, "Ok", new Date(), false));
 	}
 	
 	public List<Todo> findAll() {
 		return todos;
+	}
+	
+	public Todo save(Todo todo, String username) {
+		if(todo.getId() == -1 || todo.getId() == 0) {
+			todo.setId(++idCounter);
+			todo.setDone(false);
+			todo.setUsername(username);
+			todos.add(todo);
+		} else {
+			deleteById(todo.getId());
+			todo.setDone(false);
+			todo.setUsername(username);
+			todos.add(todo);
+		}
+		return todo;
 	}
 	
 	public Todo deleteById(long id) {
@@ -34,7 +49,7 @@ public class TodoHardcodedService {
 		return null;
 	}
 
-	private Todo findById(long id) {
+	public Todo findById(long id) {
 		for(Todo todo : todos) {
 			if(id == todo.getId()) {
 				return todo;
